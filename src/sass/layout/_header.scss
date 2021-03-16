@@ -37,51 +37,26 @@
   background-color: $accent-background-color;
   padding-bottom: 0px;
   padding-top: 0px;
-  
-
-  &::before,
-  &::after {
-    z-index: -1;
-  position: absolute;
-  content: "";
-  bottom: 15px;
-  left: 10px;
-  width: 100%;
-  top: 80%;
-  max-width:300px;
-  background: $accent-background-color;
-  -webkit-box-shadow: 0 15px 10px $ellipse-background-color;
-  -moz-box-shadow: 0 15px 10px $ellipse-background-color;
-  box-shadow: 0 15px 10px $ellipse-background-color;
-  -webkit-transform: rotate(-2deg);
-  -moz-transform: rotate(-2deg);
-  -o-transform: rotate(-2deg);
-  -ms-transform: rotate(-2deg);
-  transform: rotate(-2deg);
-  }
-
-  &::after {
-    -webkit-transform: rotate(2deg);
-  -moz-transform: rotate(2deg);
-  -o-transform: rotate(2deg);
-  -ms-transform: rotate(2deg);
-  transform: rotate(2deg);
-  right: 10px;
-  left: auto;
-  }
+  height: 52px;
+  -webkit-box-shadow: 0 10px 6px -6px $ellipse-background-color;
+       -moz-box-shadow: 0 10px 6px -6px $ellipse-background-color;
+            box-shadow: 0 10px 6px -6px $ellipse-background-color;
 }
 
 
 .logo-block {
   display: flex;
   align-items: center;
+  position: relative;
 }
 .navigation-block {
   display: flex;
   align-items: center;  
+  position: relative;
 }
 .navigation {
   display: flex;
+  position: relative;
 
 }
 .navigation-list {
@@ -120,6 +95,8 @@ margin-right: 35px;
 .btns-block {
   display: flex;
   align-items: center;
+  position: relative;
+  
 }
 
 .burger-block {
