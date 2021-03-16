@@ -6,7 +6,6 @@
     flex-direction: column;
     position: fixed;
     width: 70%;
-    //max-width: 255px;
     height: 100vh;
     top: 0;
     left: 50%;
@@ -16,7 +15,7 @@
     overflow: scroll;
     z-index: 3;
 
-    padding: 48px 40px;
+    padding-top: 60px;
     background-color: $mobile-background-color;
     transition: transform $time-hover cubic-bezier(0.4, 0, 0.2, 1),
     visibility $time-hover cubic-bezier(0.4, 0, 0.2, 1);
@@ -51,7 +50,7 @@ display: inline-flex;
   position: absolute;
   width: 14px;
   height: 14px;
-  right: 34px;
+  right: 28px;
   top: 23px;
   cursor: pointer;
   
@@ -113,7 +112,7 @@ display: inline-flex;
 }
 
 .mobile-menu-nav-link {
-  margin-left: 21px;
+  margin-left: 11%;
   text-decoration: none;
   color: $text-color;
 
