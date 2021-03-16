@@ -22,6 +22,7 @@
 
 
 .modal {
+    overflow: scroll;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -139,7 +140,7 @@ textarea::placeholder {
 
 .modal-submit {
     margin: 0 auto;
-    margin-top: 50px;
+    margin-top: 30px;
     padding: 10px 55px;
     font-size: 16px;
     line-height: 1.87;
@@ -233,10 +234,9 @@ input:focus + .modal-icon {
 .modal-checkbox ~ span::before {
     content: '';
     display: inline-flex;
-    width: 16px;
-    height: 15px;
+    width: 18px;
+    height: 17px;
     margin-right: 8px;
-
     border: 2px solid $title-text-color;
     border-radius: 2px;
 }
@@ -245,3 +245,14 @@ input:focus + .modal-icon {
     outline: 2px solid $accent-color;
   }
 
+  .modal-checkbox:checked + span::before {
+    background-color: $title-text-color;
+    background-image: url('../images/modal-icon/check.svg');
+    background-size: contain;
+    background-origin: border-box;
+    border: 2px solid $title-text-color;
+}
+
+.maps { 
+    overflow: hidden
+}

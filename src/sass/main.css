@@ -56,7 +56,8 @@ body {
 .container {
   width: 100%;
   margin: 0 auto;
-  padding: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 @media screen and (min-width: 480px) {
@@ -163,32 +164,6 @@ body {
   .section-hero .container {
     padding-top: 52px;
     height: 665px;
-  }
-}
-
-.section-products .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding-top: 121px;
-  padding-bottom: 98px;
-  background-color: #fff5f6;
-}
-
-@media screen and (min-width: 768px) {
-  .section-products .container {
-    padding-top: 122px;
-    padding-bottom: 112px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .section-products .container {
-    padding-top: 127px;
-    padding-bottom: 119px;
   }
 }
 
@@ -1278,33 +1253,36 @@ body {
   }
 }
 
-.title {
-  text-align: center;
-  text-transform: uppercase;
-  color: #d41443;
-  font-family: "Titan one", sans-serif;
-  font-size: 34px;
-  font-weight: 400;
-  line-height: 1.147;
-  letter-spacing: 0.04em;
+.section-products {
+  padding-top: 121px;
+  padding-bottom: 98px;
 }
 
 @media screen and (min-width: 768px) {
-  .title {
-    font-size: 48px;
-    font-weight: 400;
-    line-height: 1.146;
-    letter-spacing: 0.04em;
+  .section-products {
+    padding-top: 122px;
+    padding-bottom: 112px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .title {
-    font-size: 58px;
-    font-weight: 400;
-    line-height: 1.138;
-    letter-spacing: 0.06em;
+  .section-products {
+    padding-top: 127px;
+    padding-bottom: 119px;
   }
+}
+
+.products-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .subtitle {
@@ -1337,49 +1315,125 @@ body {
   }
 }
 
+.title {
+  text-align: center;
+  text-transform: uppercase;
+  color: #d41443;
+  font-family: "Titan one", sans-serif;
+  margin-bottom: 144px;
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 1.147;
+  letter-spacing: 0.04em;
+}
+
+@media screen and (min-width: 768px) {
+  .title {
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 1.146;
+    letter-spacing: 0.04em;
+    margin-bottom: 150px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .title {
+    font-size: 58px;
+    font-weight: 400;
+    line-height: 1.138;
+    letter-spacing: 0.06em;
+    margin-bottom: 260px;
+  }
+}
+
 .products-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-.products-list-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.products-list-item :not(:last-child) {
-  margin-bottom: 130px;
-}
-
 @media screen and (min-width: 768px) {
-  .products-list-item :not(:last-child) {
-    margin-right: 20px;
+  .products-list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin: -10px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .products-list-item :not(:last-child) {
-    margin-right: 30px;
+  .products-list {
+    margin: -15px;
   }
 }
 
-.products-item-wrapper {
-  width: 280px;
+.products-list-item {
+  position: relative;
+  max-width: 280px;
   height: 485px;
-  left: 20px;
-  top: 1454px;
-  background: #c2e297;
+  padding-top: 161px;
+  padding-right: 44px;
+  padding-left: 44px;
+  padding-bottom: 40px;
   border-radius: 24px;
+  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  .products-list-item:not(:last-child) {
+    margin-bottom: 130px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .products-list-item {
+    width: 220px;
+    height: 485px;
+    padding-top: 152px;
+    padding-right: 11px;
+    padding-left: 11px;
+    padding-bottom: 40px;
+  }
+  .products-list-item:not(:last-child) {
+    margin-right: 20px;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .products-list-item {
+    width: 329px;
+    height: 525px;
+    padding-top: 163px;
+    padding-right: 44px;
+    padding-left: 44px;
+    padding-bottom: 50px;
+  }
+  .products-list-item:not(:last-child) {
+    margin-right: 30px;
+    margin-bottom: 0;
+  }
+}
+
+.products-list-item:nth-child(1) {
+  background: #ffa5ba;
+}
+
+.products-list-item:nth-child(2) {
+  background: #f0d1a5;
+}
+
+.products-list-item:nth-child(3) {
+  background: #c2e297;
 }
 
 .products-item-title {
@@ -1387,19 +1441,11 @@ body {
   text-transform: uppercase;
   color: #ffffff;
   font-family: "Titan one", sans-serif;
-  padding-left: 53px;
-  padding-right: 53px;
+  margin-bottom: 30px;
   font-size: 20px;
   font-weight: 400;
   line-height: 1.15;
   letter-spacing: 0.04em;
-}
-
-@media screen and (min-width: 768px) {
-  .products-item-title {
-    padding-left: 23px;
-    padding-right: 23px;
-  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1408,16 +1454,18 @@ body {
     font-weight: 400;
     line-height: 1.133;
     letter-spacing: 0.04em;
-    padding-left: 60px;
-    padding-right: 60px;
+    margin-bottom: 32px;
   }
 }
 
 .products-item-text {
+  position: relative;
   text-align: center;
   color: #ffffff;
-  padding-left: 40px;
-  padding-right: 40px;
+  max-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
   font-size: 14px;
   font-weight: 700;
   line-height: 1.5;
@@ -1430,8 +1478,7 @@ body {
     font-weight: 700;
     line-height: 1.786;
     letter-spacing: 0.04em;
-    padding-left: 11px;
-    padding-right: 11px;
+    margin-bottom: 40px;
   }
 }
 
@@ -1441,8 +1488,263 @@ body {
     font-weight: 700;
     line-height: 1.75;
     letter-spacing: 0.04em;
-    padding-left: 44px;
-    padding-right: 44px;
+    margin-bottom: 62px;
+  }
+}
+
+.products-dots {
+  position: relative;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ffffff;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+@media screen and (min-width: 1200px) {
+  .products-dots {
+    margin-bottom: 32px;
+  }
+}
+
+.products-dots::before, .products-dots::after {
+  position: absolute;
+  content: '';
+  display: block;
+  background-color: #ffffff;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.products-dots::before {
+  right: 10px;
+}
+
+.products-dots::after {
+  left: 10px;
+}
+
+.products-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: none;
+  border-radius: 50%;
+  background-color: #ffffff;
+  fill: #d41443;
+  margin: 0 auto;
+  width: 40px;
+  height: 40px;
+  -webkit-transition: background-color 250ms linear, fill 250ms linear;
+  transition: background-color 250ms linear, fill 250ms linear;
+}
+
+@media screen and (min-width: 768px) {
+  .products-btn {
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .products-btn {
+    margin-bottom: 50px;
+  }
+}
+
+.products-btn:hover, .products-btnfocus {
+  cursor: pointer;
+  background-color: #c7133e;
+  fill: #ffffff;
+}
+
+.button-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.ice-cream::before {
+  content: '';
+  position: absolute;
+  top: -113px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: block;
+  width: 249px;
+  height: 252px;
+  background-image: url(../images/products/mobile/ice-cream.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .ice-cream::before {
+    background-image: url(../images/products/mobile/ice-cream@2.png);
+  }
+}
+
+.ice-coffee::before {
+  content: '';
+  position: absolute;
+  top: -113px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: block;
+  width: 249px;
+  height: 252px;
+  background-image: url(../images/products/mobile/ice-coffee.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .ice-coffee::before {
+    background-image: url(../images/products/mobile/ice-coffee@2.png);
+  }
+}
+
+.milkshake::before {
+  content: '';
+  position: absolute;
+  top: -113px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: block;
+  width: 249px;
+  height: 252px;
+  background-image: url(../images/products/mobile/milkshake.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .milkshake::before {
+    background-image: url(../images/products/mobile/milkshake@2.png);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .ice-cream::before {
+    content: '';
+    position: absolute;
+    top: -104px;
+    width: 220px;
+    height: 233px;
+    background-image: url(../images/products/mobile/ice-cream.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .ice-cream::before {
+    background-image: url(../images/products/mobile/ice-cream@2.png);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .ice-coffee::before {
+    content: '';
+    position: absolute;
+    top: -104px;
+    width: 220px;
+    height: 233px;
+    background-image: url(../images/products/mobile/ice-coffee.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .ice-coffee::before {
+    background-image: url(../images/products/mobile/ice-coffee@2.png);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .milkshake::before {
+    content: '';
+    position: absolute;
+    top: -104px;
+    width: 220px;
+    height: 233px;
+    background-image: url(../images/products/mobile/milkshake.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .milkshake::before {
+    background-image: url(../images/products/mobile/milkshake@2.png);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .ice-cream::before {
+    content: '';
+    position: absolute;
+    top: -210px;
+    width: 335px;
+    height: 335px;
+    background-image: url(../images/products/mobile/ice-cream.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .ice-cream::before {
+    background-image: url(../images/products/mobile/ice-cream@2.png);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .ice-coffee::before {
+    content: '';
+    position: absolute;
+    top: -210px;
+    width: 335px;
+    height: 335px;
+    background-image: url(../images/products/mobile/ice-coffee.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .ice-coffee::before {
+    background-image: url(../images/products/mobile/ice-coffee@2.png);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .milkshake::before {
+    content: '';
+    position: absolute;
+    top: -210px;
+    width: 335px;
+    height: 335px;
+    background-image: url(../images/products/mobile/milkshake.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .milkshake::before {
+    background-image: url(../images/products/mobile/milkshake@2.png);
   }
 }
 
@@ -1824,45 +2126,37 @@ body {
 
 .gallery {
   height: 122px;
-  background-repeat: no-repeat;
-  background: #ffffff;
-  background-image: url("../images/gallery/mobile/ice-cream-mob.jpg");
+  position: relative;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(54%, #fff5f6), color-stop(54%, #ffffff));
+  background-image: linear-gradient(to bottom, #fff5f6 54%, #ffffff 54%);
 }
 
-@media screen and (min-devicel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px), screen and (min-resolution: 192dpi) and (min-width: 320px), screen and (min-resolution: 2dppx) and (min-width: 320px) {
-  .gallery {
-    background-image: url("../images/gallery/mobile/ice-cream-mob@2x.jpg");
-  }
+.gallery-container {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 122px;
 }
 
 @media screen and (min-width: 768px) {
+  .gallery-container,
   .gallery {
-    max-width: 768px;
     height: 264px;
-    margin: 0 auto;
-    background-image: url("../images/gallery/tablet/ice-cream-tabl.jpg");
   }
-}
-
-@media screen and (min-devicel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px), screen and (min-resolution: 192dpi) and (min-width: 768px), screen and (min-resolution: 2dppx) and (min-width: 768px) {
   .gallery {
-    background-image: url("../images/gallery/tablet/ice-cream-tabl@2x.jpg");
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(36%, #fff5f6), color-stop(36%, #ffffff));
+    background-image: linear-gradient(to bottom, #fff5f6 36%, #ffffff 36%);
   }
 }
 
 @media screen and (min-width: 1200px) {
+  .gallery-container,
   .gallery {
-    max-width: 1600px;
     height: 430px;
-    -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    background-image: url("../images/gallery/desktop/ice-cream-desk.jpg");
   }
-}
-
-@media screen and (min-devicel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (min-resolution: 192dpi) and (min-width: 1200px), screen and (min-resolution: 2dppx) and (min-width: 1200px) {
   .gallery {
-    background-image: url("../images/gallery/desktop/ice-cream-desk@2x.jpg");
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(33%, #fff5f6), color-stop(33%, #ffffff));
+    background-image: linear-gradient(to bottom, #fff5f6 33%, #ffffff 33%);
   }
 }
 
@@ -1894,7 +2188,7 @@ body {
 
 .customer-reviews {
   padding-top: 80px;
-  padding-bottom: 52px;
+  padding-bottom: 43px;
 }
 
 @media screen and (min-width: 768px) {
@@ -1941,27 +2235,19 @@ li {
 }
 
 .sviper-text {
-  position: relative;
   font-weight: 500;
   text-align: center;
   letter-spacing: 0.04em;
   color: #000000;
-  padding: 42px 66px 26px 56px;
-  background-color: #fafafa;
-  z-index: 2;
   font-size: 12px;
   line-height: 2.55;
-  display: inline;
-  background-repeat: no-repeat;
-  background-size: 100% 1px;
-  background-image: repeating-linear-gradient(to right, #e1e1e1, #e1e1e1);
+  background-image: repeating-linear-gradient(to top, #E1E1E1 0px 1px, transparent 1px 31px);
 }
 
 @media screen and (min-width: 768px) {
   .sviper-text {
     font-size: 14px;
     line-height: 2.16;
-    padding: 48px 80px 34px 80px;
   }
 }
 
@@ -1992,6 +2278,63 @@ li {
   }
 }
 
+.slider-text-wrapper {
+  position: relative;
+  padding: 42px 66px 26px 56px;
+  background-color: #fafafa;
+  z-index: 2;
+}
+
+@media screen and (min-width: 768px) {
+  .slider-text-wrapper {
+    padding: 48px 80px 34px 80px;
+  }
+}
+
+.sviper-dots-element {
+  position: relative;
+  margin-top: 30px;
+  margin-bottom: 18px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #c7133e;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+}
+
+@media screen and (min-width: 768px) {
+  .sviper-dots-element {
+    margin-bottom: 14px;
+    margin-top: 24px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .sviper-dots-element {
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+}
+
+.sviper-dots-element::before, .sviper-dots-element::after {
+  position: absolute;
+  content: '';
+  display: block;
+  background-color: #c7133e;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+}
+
+.sviper-dots-element::before {
+  right: 10px;
+}
+
+.sviper-dots-element::after {
+  left: 10px;
+}
+
 .sviper-name {
   font-weight: 500;
   font-size: 14px;
@@ -1999,37 +2342,18 @@ li {
   text-align: center;
   color: #000000;
   margin-bottom: 30px;
-  margin-top: 14px;
-}
-
-.sviper-name::before {
-  content: '';
-  background-image: url(../images/reviews/elements/dots.svg);
-  position: absolute;
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 32px;
-  height: 4px;
-  fill: #c7133e;
-  top: 272px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
 }
 
 @media screen and (min-width: 768px) {
   .sviper-name {
     font-size: 16px;
     margin-bottom: 35px;
-    margin-top: 42px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .sviper-name {
-    margin-top: 34px;
     font-size: 20px;
-    margin-top: 34px;
   }
 }
 
@@ -2131,7 +2455,6 @@ li {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    padding-top: 60px;
   }
 }
 
@@ -2484,6 +2807,7 @@ li {
 
 .footer {
   padding-bottom: 25px;
+  background-color: #fff5f6;
 }
 
 @media screen and (min-width: 768px) {
@@ -2719,13 +3043,12 @@ li {
       -ms-flex-direction: column;
           flex-direction: column;
   position: fixed;
-  width: 100%;
-  max-width: 255px;
+  width: 70%;
   height: 100vh;
   top: 0;
   left: 50%;
-  -webkit-transform: translateX(-300%) translateY(0%);
-          transform: translateX(-300%) translateY(0%);
+  -webkit-transform: translateX(-140%) translateY(0%);
+          transform: translateX(-140%) translateY(0%);
   visibility: hidden;
   pointer-events: none;
   overflow: scroll;
@@ -2741,8 +3064,8 @@ li {
 }
 
 .mobile-menu.is-open {
-  -webkit-transform: translateX(-225%) translateY(0%);
-          transform: translateX(-225%) translateY(0%);
+  -webkit-transform: translateX(-70%) translateY(0%);
+          transform: translateX(-70%) translateY(0%);
   visibility: visible;
   pointer-events: visible;
 }
@@ -2872,6 +3195,7 @@ li {
 }
 
 .modal {
+  overflow: scroll;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -3020,7 +3344,7 @@ textarea::placeholder {
 
 .modal-submit {
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 30px;
   padding: 10px 55px;
   font-size: 16px;
   line-height: 1.87;
@@ -3152,8 +3476,8 @@ input:focus + .modal-icon {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  width: 16px;
-  height: 15px;
+  width: 18px;
+  height: 17px;
   margin-right: 8px;
   border: 2px solid #ffa5ba;
   border-radius: 2px;
@@ -3161,5 +3485,17 @@ input:focus + .modal-icon {
 
 .modal-checkbox:focus ~ span::before {
   outline: 2px solid #d41443;
+}
+
+.modal-checkbox:checked + span::before {
+  background-color: #ffa5ba;
+  background-image: url("../images/modal-icon/check.svg");
+  background-size: contain;
+  background-origin: border-box;
+  border: 2px solid #ffa5ba;
+}
+
+.maps {
+  overflow: hidden;
 }
 /*# sourceMappingURL=main.css.map */
