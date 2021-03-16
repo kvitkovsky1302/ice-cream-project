@@ -1,6 +1,8 @@
 
 .header {
   background-color: $accent-background-color;
+  display: flex;
+  justify-content: center;
 }
 //.container-header {
 //  background-color: $accent-background-color;
@@ -47,7 +49,7 @@
 .logo-block {
   display: flex;
   align-items: center;
-  position: relative;
+  
 }
 .navigation-block {
   display: flex;
@@ -56,7 +58,7 @@
 }
 .navigation {
   display: flex;
-  position: relative;
+  
 
 }
 .navigation-list {
@@ -95,7 +97,6 @@ margin-right: 35px;
 .btns-block {
   display: flex;
   align-items: center;
-  position: relative;
   
 }
 
@@ -107,6 +108,6 @@ margin-right: 35px;
   margin-left: 30px;
 }
 .burger-icon {
-  width: 20px;
-  height: 12px;
+  width: 40px;
+  height: 20px;
 }
