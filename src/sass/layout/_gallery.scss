@@ -1,6 +1,7 @@
 .gallery {
   display: flex;
   justify-content: center;
+
   background-image: linear-gradient(
     to bottom,
     $section-background-color 40%,
@@ -16,7 +17,8 @@
   @media screen and (min-width: 768px) {
     width: 768px;
   }
-  @media screen and (min-width: 1280px) {
+
+  @media screen and (min-width: 1200px) {
     width: 1280px;
   }
   transition: transform  500ms linear;
@@ -26,6 +28,7 @@
     transform: scale(1.06);
   } 
 }
+
 
 .title {
   font-family: $title-text-font;
