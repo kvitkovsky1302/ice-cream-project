@@ -37,14 +37,8 @@ display: inline-flex;
     background-color: transparent;
     border: none;
     padding: 0;
-
-    transition: fill $time-hover cubic-bezier(0.4, 0, 0.2, 1);
-
-    &:hover,
-    &:focus {
-        fill: $accent-color;
-        cursor: pointer;
-    }
+    
+ 
 }
 .mobile-menu-close-icon {
   position: absolute;
@@ -53,7 +47,6 @@ display: inline-flex;
   right: 28px;
   top: 23px;
   cursor: pointer;
-  
 }
 
 
