@@ -7,6 +7,7 @@
     const mobileLi3 = document.querySelector("[data-li3]");
     const mobileLi4 = document.querySelector("[data-li4]");
   
+  
     menuBtnRef.addEventListener("click", () => {
       mobileMenuRef.classList.toggle("is-open");
     })
@@ -14,6 +15,7 @@
     mobileBtnClose.addEventListener('click', () => {
       mobileMenuRef.classList.toggle("is-open");
     });
+
   
   mobileLi1.addEventListener("click", () => {
     mobileMenuRef.classList.toggle("is-open"); 
@@ -32,3 +34,7 @@
     })
 })()
   
+
+})()
+
+
