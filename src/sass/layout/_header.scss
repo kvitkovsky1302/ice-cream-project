@@ -12,10 +12,11 @@
   top: 0;
   width: 100%;
   z-index: 3;
+  
 }
 
 .sticky + .content {
-  padding-top: 300px;
+  margin-top: 400px;
 }
 
   
@@ -32,9 +33,6 @@
 
   //  }
   
-
-
-
 .sticky .container-header {
   background-color: $accent-background-color;
   padding-bottom: 0px;
@@ -102,12 +100,13 @@ margin-right: 35px;
 
 .burger-block {
   display: flex;
+  position: relative;
   
 }
 .buy-btn-block {
   margin-left: 30px;
 }
-.burger-icon {
-  width: 40px;
-  height: 20px;
-}
+//.burger-icon {
+//  width: 40px;
+//  height: 20px;
+//}
