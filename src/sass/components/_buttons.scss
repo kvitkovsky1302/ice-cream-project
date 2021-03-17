@@ -1,0 +1,99 @@
+.burger-btn {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
+  width: 30px;
+  height: 20px;
+  transition: fill $time-hover cubic-bezier(0.4, 0, 0.2, 1);
+  margin-left: 60px;
+  
+
+  @media screen and (min-width: 1199px) {
+    display: none;
+  }
+  
+}
+
+.burger-container {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  width: 20px;
+  height: 12px;
+  cursor: pointer;
+}
+.burger-container span, .burger-container span:before, .burger-container span:after{
+  width: 100%;
+  position: absolute;
+  height: 1px;
+  background: $accent-color;
+  display: block;
+  transition: .3s;
+  border-radius: 2px;
+}
+.burger-container span:before{
+  content: "";
+  top: -5px;
+  transition: top 300ms 300ms, transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+.burger-container span{
+  top: 5px;
+}
+.burger-container span:after{
+  content: "";
+  bottom: -5px;
+  transition: bottom 300ms 300ms, transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.burger-container span.active:before{
+  content: "";
+  top: 0px;
+  transform: rotate(45deg);
+  transition: top 300ms, transform 300ms 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.burger-container span.active:after{
+  content: "";
+  bottom: 0;
+  transform: rotate(-45deg);
+  transition: bottom 300ms, transform 300ms 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.burger-container span.active{
+  background: rgba(255, 255, 255, 0); 
+}
+
+
+.header-btn {
+  @include button(
+    $mw: 62px,
+    $btn-clr: $btn-background-color,
+    $txt-clr: $accent-color,
+    $fs: 16px,
+    $fw: 700,
+    $lh: 21px,
+    $pt: 10px,
+    $pb: 10px,
+    $pl: 10px,
+    $pr: 10px
+  );
+  width: 159px;
+  height: 44px;
+  padding: 10px 30px;
+  align-items: center;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $btn-hover-color;
+    cursor: pointer;
+  }
+   & svg {
+    width: 7px;
+    height: 11px;
+    margin-left: 13px;
+  }
+}

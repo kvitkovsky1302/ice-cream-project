@@ -1,0 +1,119 @@
+// Стили для mobile-menu
+
+.mobile-menu {
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    position: fixed;
+    width: 70%;
+    height: 100vh;
+    top: 0;
+    left: 50%;
+    transform: translateX(-140%) translateY(0%);
+    visibility: hidden;
+    pointer-events: none;
+    overflow: scroll;
+    z-index: 3;
+
+    padding-top: 60px;
+    background-color: $mobile-background-color;
+    transition: transform $time-hover cubic-bezier(0.4, 0, 0.2, 1),
+    visibility $time-hover cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: (-8px 0px 20px rgba(0, 0, 0, 0.25));
+
+    &.is-open {
+        transform: translateX(-70%) translateY(0%);
+        visibility: visible;
+        pointer-events: visible;
+    }
+
+    @media screen and (min-width: 1199px) {
+        display: none;
+    }
+}
+
+.close-button {
+display: inline-flex;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    
+ 
+}
+.mobile-menu-close-icon {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  right: 28px;
+  top: 23px;
+  cursor: pointer;
+}
+
+
+
+.mobile-menu-button {
+  display: flex;
+  width: 186px;
+  height: 44px;
+  margin: 0 auto 19px;
+
+  justify-content: center;
+  align-items: center;
+  border-radius: 22px;
+  border-color: transparent;
+  cursor: pointer;
+
+  font-family: $text-font;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.31;
+  background-color: $btn-background-color;
+  color: $accent-btn-background-color;
+
+  transition-property: background-color;
+  transition-duration: $time-hover;
+}
+
+.mobile-menu-button:hover,
+.mobile-menu-button:focus {
+  background-color: $btn-hover-color;
+}
+
+.mobile-menu-vector-icon {
+  width: 10px;
+  height: 10px;
+  margin-left: 14px;
+  margin-top: 3px;
+}
+
+.mobile-menu-nav-item {
+  width: 100%;
+  padding-top: 12px;
+  padding-bottom: 12px;
+
+  border-bottom: 1px solid $mobile-border-color;
+
+  list-style: none;
+  font-family: DM Sans;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.mobile-menu-first-item {
+  border-top: 1px solid $mobile-border-color;
+}
+
+.mobile-menu-nav-link {
+  margin-left: 11%;
+  text-decoration: none;
+  color: $text-color;
+
+  transition-property: color;
+  transition-duration: $time-hover;
+}
+
+.mobile-menu-nav-link:hover,
+.mobile-menu-nav-link:focus {
+  color: $accent-color;
+}
