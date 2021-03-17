@@ -126,29 +126,33 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   var mobileLi2 = document.querySelector("[data-li2]");
   var mobileLi3 = document.querySelector("[data-li3]");
   var mobileLi4 = document.querySelector("[data-li4]");
-  mobileMenuRef.addEventListener("mouseout", function () {
-    mobileMenuRef.classList.toggle("is-open");
-  }); // menuBtnRef.addEventListener("mouseout", () => {
+  var burger1 = document.querySelector(".burger-container span"); // mobileMenuRef.addEventListener("mouseout", () => {
   //   mobileMenuRef.classList.toggle("is-open");
-  //   })
+  //     burger1.classList.toggle('active');
+  // })
 
   menuBtnRef.addEventListener("click", function () {
     mobileMenuRef.classList.toggle("is-open");
   });
   mobileBtnClose.addEventListener('click', function () {
     mobileMenuRef.classList.toggle("is-open");
+    burger1.classList.toggle('active');
   });
   mobileLi1.addEventListener("click", function () {
     mobileMenuRef.classList.toggle("is-open");
+    burger1.classList.toggle('active');
   });
   mobileLi2.addEventListener("click", function () {
     mobileMenuRef.classList.toggle("is-open");
+    burger1.classList.toggle('active');
   });
   mobileLi3.addEventListener("click", function () {
     mobileMenuRef.classList.toggle("is-open");
+    burger1.classList.toggle('active');
   });
   mobileLi4.addEventListener("click", function () {
     mobileMenuRef.classList.toggle("is-open");
+    burger1.classList.toggle('active');
   });
 })();
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -179,7 +183,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61313" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62421" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
