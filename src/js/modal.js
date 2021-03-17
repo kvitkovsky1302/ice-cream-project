@@ -36,6 +36,3 @@
     refs3.modal.classList.toggle("is-hidden");
   }
 })();
-
-
- 

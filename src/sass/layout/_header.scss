@@ -1,7 +1,8 @@
-header {
+.header {
   background-color: $accent-background-color;
   display: flex;
   justify-content: center;
+  height: 52px;
 }
 //.container-header {
 //  background-color: $accent-background-color;
@@ -13,6 +14,13 @@ header {
   width: 100%;
   z-index: 3;
 }
+
+.sticky.header {
+  -webkit-box-shadow: 0 10px 6px -6px $ellipse-background-color;
+  -moz-box-shadow: 0 10px 6px -6px $ellipse-background-color;
+  box-shadow: 0 10px 6px -6px $ellipse-background-color;
+}
+
 
 .sticky + .content {
   margin-top: 400px;
@@ -36,13 +44,17 @@ header {
   padding-bottom: 0px;
   padding-top: 0px;
   height: 52px;
-  -webkit-box-shadow: 0 10px 6px -6px $ellipse-background-color;
-  -moz-box-shadow: 0 10px 6px -6px $ellipse-background-color;
-  box-shadow: 0 10px 6px -6px $ellipse-background-color;
+
+  // -webkit-box-shadow: 0 10px 6px -6px $ellipse-background-color;
+  // -moz-box-shadow: 0 10px 6px -6px $ellipse-background-color;
+  // box-shadow: 0 10px 6px -6px $ellipse-background-color;
+
+  
   border-left: 2px solid $ellipse-background-color;
   border-right: 2px solid $ellipse-background-color;
   border-bottom: 2px solid $ellipse-background-color;
   border-radius: 4px;
+
 }
 
 .logo-block {
