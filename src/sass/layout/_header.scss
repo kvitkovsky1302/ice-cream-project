@@ -2,11 +2,7 @@
   background-color: $accent-background-color;
   display: flex;
   justify-content: center;
-  height: 52px;
 }
-//.container-header {
-//  background-color: $accent-background-color;
-//}
 
 .sticky {
   position: fixed;
@@ -19,6 +15,8 @@
   -webkit-box-shadow: 0 10px 6px -6px $ellipse-background-color;
   -moz-box-shadow: 0 10px 6px -6px $ellipse-background-color;
   box-shadow: 0 10px 6px -6px $ellipse-background-color;
+  background-color: $accent-background-color;
+  height: 52px;
 }
 
 .sticky + .content {
