@@ -1,6 +1,7 @@
 .production {
   padding-top: 125px;
   padding-bottom: 39px;
+  position: relative;
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     padding-top: 130px;
     padding-bottom: 66px;
@@ -203,4 +204,9 @@
     height: 11px;
     margin-left: 13px;
   }
+}
+
+.trap {
+  position: absolute;
+  bottom: 70px;
 }
