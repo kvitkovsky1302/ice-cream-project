@@ -7,15 +7,20 @@
     const mobileLi3 = document.querySelector("[data-li3]");
     const mobileLi4 = document.querySelector("[data-li4]");
   
+  mobileMenuRef.addEventListener("mouseout", () => {
+    mobileMenuRef.classList.toggle("is-open");
+  })
+  // menuBtnRef.addEventListener("mouseout", () => {
+  //   mobileMenuRef.classList.toggle("is-open");
+  //   })
   
-    menuBtnRef.addEventListener("click", () => {
+  menuBtnRef.addEventListener("click", () => {
       mobileMenuRef.classList.toggle("is-open");
     })
 
-    mobileBtnClose.addEventListener('click', () => {
+  mobileBtnClose.addEventListener('click', () => {
       mobileMenuRef.classList.toggle("is-open");
     });
-
   
   mobileLi1.addEventListener("click", () => {
     mobileMenuRef.classList.toggle("is-open"); 
@@ -33,8 +38,3 @@
     mobileMenuRef.classList.toggle("is-open"); 
     })
 })()
-  
-
-})()
-
-
