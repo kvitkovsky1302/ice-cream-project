@@ -1,4 +1,3 @@
-
 .header {
   background-color: $accent-background-color;
   display: flex;
@@ -12,58 +11,52 @@
   top: 0;
   width: 100%;
   z-index: 3;
-  
 }
 
 .sticky + .content {
   margin-top: 400px;
 }
 
-  
-  //@media screen and (min-width: 320px) {
-  //  padding-top: 80px;
-  //  }
-    
-  //  @media screen and (min-width: 768px) {
-  //    padding-top: 110px;
-  //  }
+//@media screen and (min-width: 320px) {
+//  padding-top: 80px;
+//  }
 
-  // @media screen and (min-width: 1200px) {
-  //    padding-top: 105px;
+//  @media screen and (min-width: 768px) {
+//    padding-top: 110px;
+//  }
 
-  //  }
-  
+// @media screen and (min-width: 1200px) {
+//    padding-top: 105px;
+
+//  }
+
 .sticky .container-header {
   background-color: $accent-background-color;
   padding-bottom: 0px;
   padding-top: 0px;
   height: 52px;
   -webkit-box-shadow: 0 10px 6px -6px $ellipse-background-color;
-       -moz-box-shadow: 0 10px 6px -6px $ellipse-background-color;
-            box-shadow: 0 10px 6px -6px $ellipse-background-color;
+  -moz-box-shadow: 0 10px 6px -6px $ellipse-background-color;
+  box-shadow: 0 10px 6px -6px $ellipse-background-color;
 }
-
 
 .logo-block {
   display: flex;
   align-items: center;
-  
 }
 .navigation-block {
   display: flex;
-  align-items: center;  
+  align-items: center;
   position: relative;
 }
 .navigation {
   display: flex;
-  
-
 }
 .navigation-list {
   display: flex;
   flex-direction: row;
   align-items: center;
-  
+
   @media screen and (max-width: 1199px) {
     display: none;
   }
@@ -73,7 +66,7 @@
   flex-wrap: nowrap;
 }
 .navigation-list-item:not(:last-child) {
-margin-right: 35px;
+  margin-right: 35px;
 }
 
 .navigation-list-link {
@@ -91,17 +84,14 @@ margin-right: 35px;
   color: $accent-color;
 }
 
-
 .btns-block {
   display: flex;
   align-items: center;
-  
 }
 
 .burger-block {
   display: flex;
   position: relative;
-  
 }
 .buy-btn-block {
   margin-left: 30px;
