@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://Kateryna-dzhy.github.io/ice-cream-project",
+  "homepage": "https://kvitkovsky1302.github.io/ice-cream-project",
   "scripts": {
     "dev": "parcel src/*.html",
     "build": "parcel build src/*.html",
